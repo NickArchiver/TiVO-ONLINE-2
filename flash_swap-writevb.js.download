@@ -1,0 +1,54 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+// Check the browser...we're looking for ie/win
+var isIE = (navigator.appVersion.indexOf("MSIE") != -1) ? true : false;    // true if we're on ie
+var isWin = (navigator.appVersion.indexOf("Windows") != -1) ? true : false; // true if we're on windows
+
+// This is a js1.1 code block, so make note that js1.1 is supported.
+jsVersion = 1.1;
+
+// Write vbscript detection on ie win. IE on Windows doesn't support regular
+// JavaScript plugins array detection.
+if(isIE && isWin){
+  document.write('<SCR' + 'IPT LANGUAGE=VBScript\> \n');
+  document.write('on error resume next \n');
+  document.write('flash2Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.2"))) \n');
+  document.write('flash3Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.3"))) \n');
+  document.write('flash4Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.4"))) \n');
+  document.write('flash5Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.5"))) \n');  
+  document.write('flash6Installed = (IsObject(CreateObject("ShockwaveFlash.ShockwaveFlash.6"))) \n');  
+  document.write('</SCR' + 'IPT\> \n'); // break up end tag so it doesn't end our script
+}
+
+}
+/*
+     FILE ARCHIVED ON 14:17:16 Jan 01, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:05:44 Dec 04, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 289.941
+  exclusion.robots: 0.116
+  exclusion.robots.policy: 0.108
+  RedisCDXSource: 1.453
+  esindex: 0.008
+  LoadShardBlock: 263.464 (3)
+  PetaboxLoader3.datanode: 258.662 (4)
+  CDXLines.iter: 22.593 (3)
+  load_resource: 232.549
+  PetaboxLoader3.resolve: 78.298
+*/

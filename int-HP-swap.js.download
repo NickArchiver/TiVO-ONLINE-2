@@ -1,0 +1,64 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+// In this section we set up the content to be placed dynamically on the page.
+// Customize movie tags and alternate html content below.
+
+if (!useRedirect) {    // if dynamic embedding is turned on
+  if(hasRightVersion) {  // if we've detected an acceptable version
+    var oeTags = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"'
+    + 'width="582" height="436"'
+	+ 'ID="tivo_home"'
+	+ 'align="middle"'
+    + 'codebase="https://web.archive.org/web/20060220065245/http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0">'
+	+'<param name="allowScriptAccess" value="sameDomain" />'
+	+'<param name="movie" value="i/swf/tivo_home.swf" />'
+	+'<param name="quality" value="high" />'
+	+'<param name="bgcolor" value="#ffffff" />'
+	+'<param name="flashvars" value="xmlpath=i/swf/homebanner.xml" />'
+	+ '<PARAM NAME="PLAY" VALUE="true">'
+	+ '<PARAM NAME="SCALE" VALUE="exactfit">'
+	+'<embed src="i/swf/tivo_home.swf" width="582" height="436" align="middle" quality="high" bgcolor="#ffffff" name="tivo_home" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="https://web.archive.org/web/20060220065245/http://www.macromedia.com/go/getflashplayer" flashvars="xmlpath=i/swf/homebanner.xml" />'
+    + '</OBJECT>';
+
+    document.write(oeTags);   // embed the flash movie
+
+  } else {  // flash is too old or we can't detect the plugin
+    // NOTE: height, width are required!
+        var alternateContent = '<div id="noflash"><script type="text/javascript">function swapSlide ( num ){var slide_src   = "i/slideshow/slide" + num + ".jpg";var buttons_src = "i/slideshow/buttons" + num + ".jpg";var slide_obj   = document.getElementById( "noflash_slide" );var buttons_obj = document.getElementById( "noflash_buttons" );slide_obj.src   = slide_src;buttons_obj.src = buttons_src;}</script><img usemap="#slide_links" id="noflash_slide" name="noflash_slide" src="i/slideshow/slide1.jpg" alt="" width="582" height="397" border="0" /><img usemap="#button1" id="noflash_buttons" name="noflash_buttons" src="i/slideshow/buttons1.jpg" alt="" width="582" height="39" border="0" /><map name="slide_links"><area shape="rect" coords="469,60,559,78" href="#"><area shape="rect" coords="469,82,559,100" href="#"></map><map name="button1"><area shape="rect" coords="23,0,155,39" href="javascript:void(0)" onmousedown="swapSlide( 1 )"><area shape="rect" coords="157,0,289,39" href="javascript:void(0)" onmousedown="swapSlide( 2 )"><area shape="rect" coords="291,0,424,39" href="javascript:void(0)" onmousedown="swapSlide( 3 )"><area shape="rect" coords="426,0,557,39" href="javascript:void(0)" onmousedown="swapSlide( 4 )"></map></div>' 
+	  + '';
+    document.write(alternateContent);  // insert non-flash content
+  }
+}
+
+}
+/*
+     FILE ARCHIVED ON 06:52:45 Feb 20, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:05:45 Dec 04, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots.policy: 0.198
+  esindex: 0.017
+  load_resource: 84.093
+  RedisCDXSource: 5.016
+  PetaboxLoader3.resolve: 28.697
+  CDXLines.iter: 42.603 (3)
+  exclusion.robots: 0.211
+  PetaboxLoader3.datanode: 100.187 (4)
+  captures_list: 113.568
+  LoadShardBlock: 60.677 (3)
+*/
